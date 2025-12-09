@@ -19,7 +19,7 @@ export default function ArtGallery() {
   useEffect(() => {
     async function load() {
       const res = await fetch(
-        "https://api.artic.edu/api/v1/artworks?limit=5&fields=id,title,image_id"
+        "https://api.artic.edu/api/v1/artworks?limit=20&fields=id,title,image_id"
       );
       const data = await res.json();
 
