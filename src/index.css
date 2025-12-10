@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -28,6 +32,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  max-width: 100%;
 }
 
 h1 {
@@ -65,4 +70,40 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+#game{
+  background-color: rgba(143, 135, 135, 0);
+  width: 100%;
+
+}
+
+#imgs{
+
+  display: grid;
+  grid-template-columns: repeat(autofit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+#imgs div{
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  text-align: center;
+  width: 250px;
+}
+
+#imgs div img{
+  width: 100%;
+  object-fit: "cover";
+  display: block;
+}
+
+#imgs div p{
+  margin: 0;
+  padding: 5px;
+  font-size: 0.85rem;
+  flex-grow: 1;
 }
